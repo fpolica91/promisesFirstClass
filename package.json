@@ -1,0 +1,19 @@
+{
+  "name": "promises_exercise_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpolica91/promisesFirstClass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fpolica91/promisesFirstClass/issues"
+  },
+  "homepage": "https://github.com/fpolica91/promisesFirstClass#readme"
+}

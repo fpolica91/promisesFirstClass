@@ -1,5 +1,5 @@
 
-
+const fetch = require('node-fetch')
 // DOING IT USING PROMISES AND THREE SEPARATE FUNCTION VARIABLES
 const func1 = function () {
     return new Promise((res, rej) => {
@@ -108,3 +108,48 @@ async function oneMessagforAll() {
 
 finalMessage()
 oneMessagforAll()
+
+// PROMISE RETURNING -> ASYNC FUNCTION RETURN A PROMISE
+
+async function greeting() {
+    return "Hello Ironhackers"
+}
+
+const greet = greeting()
+console.log(greet)
+
+
+// ASYNC FUNCTION EXPRESS
+
+const msg = async function () {
+    const msg = await sport()
+    console.log(`The best sport is: ${msg}`)
+}
+msg()
+
+// ASYNC ARROW FUNCTION
+
+const arrowmsg = async () => {
+    const arrowmsg = await sport()
+    console.log(`the best sport is still ${arrowmsg}, but this uses arrows`)
+}
+
+arrowmsg()
+
+async function fetchUsers(endpoint) {
+    try {
+        const res = await fetch(endpoint);
+        let data = await res.json();
+
+        data = data.map(user => user.username);
+
+        console.log(data);
+    } catch (err) {
+        console.log(err.message)
+    }
+
+}
+
+
+
+fetchUsers('https://jsonplaceholder.typicode.com/users');
